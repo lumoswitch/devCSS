@@ -1,6 +1,6 @@
 # devCSS - a lightweight CSS library for devs
 
-<img src="assets\images\cover.png" width="100%" />
+<img src="assets\cover.png" width="100%" />
 
 A basic library made with Sass.
 
