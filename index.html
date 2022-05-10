@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devCSS - a CSS library</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/themes/dark.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <nav class="navbar-primary text-white mb-4">
+        <div class="container">
+            <h2 class="site-title">devCSS</h2>
+            <p>A lightweight CSS library for devs</p>
+        </div>
+        <button class="switch btn-info text-black" onclick="changeMode();">Night mode</button>
+    </nav>
+    <!-- colors -->
+    <div class="p-2">
+        <div class="column gap-2">
+            <span class="text-primary br-xs"></span>
+            <span class="text-secondary"></span>
+            <span class="text-error"></span>
+            <span class="text-info"></span>
+            <span class="text-blue"></span>
+            <span class="text-red"></span>
+            <span class="text-green"></span>
+            <span class="text-yellow"></span>
+            <span class="text-purple"></span>
+            <span class="text-orange"></span>
+            <span class="text-primary-dark-8"></span>
+            <span class="text-primary-dark-6"></span>
+            <span class="text-primary-dark-4"></span>
+            <span class="text-primary-dark-2"></span>
+            <span class="text-primary-light-2"></span>
+            <span class="text-primary-light-4"></span>
+            <span class="text-primary-light-6"></span>
+            <span class="text-primary-light-8"></span>
+        </div>
+
+        <div class="column gap-2">
+            <h2 class="br-sm p-2 bg-primary-light-8">Colors & Texts</h2>
+            <div class="row gap-2 p-2 color-swatcher justify-center">
+                <div class="column gap-1 align-center">
+                    <div class="br-xs w-lg h-lg sample-area bg-primary"></div>
+                    <span class="label">primary</span>
+                </div>
+                <!-- font sizes -->
+                <div class="column">
+                    <div class="text-samples text-primary">
+                        <div class="font-sm">this is small font</div>
+                        <div class="font-md">this is medium font</div>
+                        <div class="font-lg">this is large font</div>
+                        <div class="font-xl">this is extra large font</div>
+                        <div class="font-xxl">this is extra, extra large font</div>
+                    </div>
+                </div>
+                <hr class="ml-4">
+                <div class="column gap-1 align-center">
+                    <h3 class="mb-2">Color picker</h3>
+                    <div class="row gap-1">
+                        <a href="javascript:applyColor('primary');" class="br-full w-xs h-xs bg-primary"></a>
+
+                        <a href="javascript:applyColor('secondary');" class="br-full w-xs h-xs bg-secondary"></a>
+
+                        <a href="javascript:applyColor('error');" class="br-full w-xs h-xs bg-error"></a>
+
+                        <a href="javascript:applyColor('info');" class="br-full w-xs h-xs bg-info"></a>
+
+                        <a href="javascript:applyColor('blue');" class="br-full w-xs h-xs bg-blue"></a>
+
+                        <a href="javascript:applyColor('red');" class="br-full w-xs h-xs bg-red"></a>
+
+                        <a href="javascript:applyColor('green');" class="br-full w-xs h-xs bg-green"></a>
+
+                        <a href="javascript:applyColor('yellow');" class="br-full w-xs h-xs bg-yellow"></a>
+
+                        <a href="javascript:applyColor('purple');" class="br-full w-xs h-xs bg-purple"></a>
+
+                        <a href="javascript:applyColor('orange');" class="br-full w-xs h-xs bg-orange"></a>
+
+                        <a href="javascript:applyColor('gray');" class="br-full w-xs h-xs bg-gray"></a>
+
+                    </div>
+
+                    <div class="row gap-1">
+                        <a href="javascript:applyColor('primary-dark-8');"
+                            class="br-full w-xs h-xs bg-primary-dark-8"></a>
+
+                        <a href="javascript:applyColor('primary-dark-6');"
+                            class="br-full w-xs h-xs bg-primary-dark-6"></a>
+
+                        <a href="javascript:applyColor('primary-dark-4');"
+                            class="br-full w-xs h-xs bg-primary-dark-4"></a>
+
+                        <a href="javascript:applyColor('primary-dark-2');"
+                            class="br-full w-xs h-xs bg-primary-dark-2"></a>
+
+                        <a href="javascript:applyColor('primary');" class="br-full w-xs h-xs bg-primary"></a>
+
+                        <a href="javascript:applyColor('primary-light-2');"
+                            class="br-full w-xs h-xs bg-primary-light-2"></a>
+
+                        <a href="javascript:applyColor('primary-light-4');"
+                            class="br-full w-xs h-xs bg-primary-light-4"></a>
+
+                        <a href="javascript:applyColor('primary-light-6');"
+                            class="br-full w-xs h-xs bg-primary-light-6"></a>
+
+                        <a href="javascript:applyColor('primary-light-8');"
+                            class="br-full w-xs h-xs bg-primary-light-8"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="p-2 column gap-1">
+        <!-- buttons -->
+        <h2 class="br-sm p-2 bg-primary-light-8">Buttons</h2>
+        <div class="row gap-1 align-center p-2 justify-center">
+            <a href="#" class="btn">default btn</a>
+            <a href="#" class="btn-primary text-white">primary</a>
+            <a href="#" class="btn-secondary text-white">secondary</a>
+            <a href="#" class="btn-error text-white">error</a>
+            <a href="#" class="btn-info">info</a>
+            <a href="#" class="btn-outlined-purple text-purple text-hover-white">outlined purple</a>
+            <a href="#" class="btn-outlined-orange text-orange text-hover-white">outlined orange</a>
+            <a href="#" class="btn-complement-purple">complement purple</a>
+            <a href="#" class="btn-complement-primary">complement primary</a>
+        </div>
+
+    </div>
+
+
+    <!-- cards -->
+    <div class="p-2 ">
+        <h2 class="mb-2 br-sm p-2 bg-primary-light-8">Cards</h2>
+        <div class="card">
+            <h1 class="card-title">This is a card title</h1>
+            <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos deleniti, aut
+                libero
+                sunt quidem suscipit <a href="#">qui aspernatur vitae illo</a> asperiores maiores unde voluptate
+                consectetur
+                odit autem quasi quisquam quia?
+            </p>
+        </div>
+    </div>
+
+
+    <!-- grid system -->
+    <div class="p-2">
+        <h2 class="mb-2 br-sm p-2 bg-primary-light-8">Grid System</h2>
+        <div class="row justify-center p-2 gap-1">
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card">
+                    <h3 class="card-title">Hello, devs</h3>
+                    <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card">
+                    <h3 class="card-title">Hello, devs</h3>
+                    <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card">
+                    <h3 class="card-title">Hello, devs</h3>
+                    <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card">
+                    <h3 class="card-title">Hello, devs</h3>
+                    <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="navbar-primary text-white">
+        <div class="container">
+            <h2 class="site-title font-md">devCSS</h2>
+            <div class="row gap-1">
+                <a href="http://github.com" target="_blank">Github</a>
+                <a href="http://facebook.com" target="_blank">Facebook</a>
+                <a href="http://instagram.com" target="_blank">Instagram</a>
+            </div>
+            <p class="font-sm">All rights reserved</p>
+        </div>
+    </footer>
+</body>
+<script src="./js/index.js"></script>
+
+</html>
